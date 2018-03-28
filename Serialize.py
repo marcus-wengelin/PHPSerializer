@@ -89,7 +89,7 @@ class Property(object) :
 	def __repr__(self) :
 		return str(self)
 	def __str__(self) :
-		return '%s;%s' % (
+		return '%s%s' % (
 			str(self.name),
 			str(self.value)
 			)
