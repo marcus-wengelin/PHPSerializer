@@ -42,7 +42,7 @@ class Double(object) :
 	def __repr__(self) :
 		return str(self)
 	def __str__(self) :
-		return 'd:%f' % self.value
+		return 'd:%f;' % self.value
 
 class String(object) :
 	""" Class representing PHP string """
@@ -54,7 +54,7 @@ class String(object) :
 	def __repr__(self) :
 		return str(self)
 	def __str__(self) :
-		return 's:%d:"%s"' % (
+		return 's:%d:"%s";' % (
 			len(self.value),
 			self.value
 			)
@@ -74,7 +74,7 @@ class Array(object) :
 	def __repr__(self) :
 		return str(self)
 	def __str__(self) :
-		return 'a:%d:{%s}' % (
+		return 'a:%d:{%s};' % (
 			len(self.arr), 
 			''.join(
 				[str(k)+str(v) for k,v in self.arr.iteritems()]
